@@ -1,6 +1,8 @@
 # Installing nginx
 - name: Install Nginx on CentOS/RHEL
   hosts: all
+  vars_files:
+  - /var/expense/di.yaml
   become: yes  # Run with elevated privileges (sudo)
   tasks:
     - name: Install Nginx
