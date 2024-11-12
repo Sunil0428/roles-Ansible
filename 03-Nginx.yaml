@@ -1,0 +1,14 @@
+# Installing nginx
+- name: Install Nginx on CentOS/RHEL
+  hosts: all
+  become: yes  # Run with elevated privileges (sudo)
+  tasks:
+    - name: Install Nginx
+      ansible.builtin.package:
+        name: nginx
+        state: present
+    - name: Ensure Nginx is started
+      service:
+        name: nginx
+        state: started
+        enabled: yes  # Ensure it starts on boot
