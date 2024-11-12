@@ -3,6 +3,7 @@
   hosts: all
   vars_files:
   - /var/expense/di.yaml
+  serial: 2
   become: yes  # Run with elevated privileges (sudo)
   tasks:
     - name: Install Nginx
