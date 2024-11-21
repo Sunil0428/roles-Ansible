@@ -1,5 +1,5 @@
-- name: configuring mysql using roles
+- name: configuring {{component}} using roles
   hosts: backend
   become: yes
   roles:
-  - backend
+  - {{component}}
