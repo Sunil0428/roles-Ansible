@@ -1,5 +1,5 @@
 - name: configuring {{component}} using roles
-  hosts: mysql
+  hosts: all
   become: yes
   roles:
   - {{component}}
